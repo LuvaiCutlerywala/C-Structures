@@ -23,6 +23,7 @@ char *l_get(LinkedList *list, const int index) {
     return list->end->value;
   }
 
+  // Traverse linked list
   L_Node *curr = list->start;
   for (int i = 0; i < index; ++i) {
     curr = curr->next;

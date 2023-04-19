@@ -51,9 +51,9 @@ void demoLinkedList() {
   }
 
   // Test out of bounds
-  print("Reading items out of bounds from list...\n");
-  print(l_get(list, -1));
-  print(l_get(list, 20));
+  printf("Reading items out of bounds from list...\n");
+  printf(l_get(list, -1));
+  printf(l_get(list, 20));
 
   printf("Removing items from list...\n");
   for (int j = list->size - 1; j >= 0; --j) {
