@@ -54,6 +54,7 @@ void demoLinkedList() {
 
   // Test out of bounds
   printf("Reading items out of bounds from list...\n");
+  printf("Test");
   printf(l_get(list, 1));
   printf(l_get(list, 20));
 
