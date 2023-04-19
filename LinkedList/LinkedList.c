@@ -14,7 +14,7 @@ LinkedList *l_generate(const int maxSize) {
 char *l_get(LinkedList *list, const int index) {
   // Early return for outside bounds
   if (index < 0 || index >= list->size) {
-    // To do: fix silent error, should throw an exception for each case
+    printf("Index outside bounds of LinkedList");
     return NULL;
   }
 

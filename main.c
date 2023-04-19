@@ -50,6 +50,11 @@ void demoLinkedList() {
     printf("%s\n", l_get(list, j));
   }
 
+  // Test out of bounds
+  print("Reading items out of bounds from list...\n");
+  print(l_get(list, -1));
+  print(l_get(list, 20));
+
   printf("Removing items from list...\n");
   for (int j = list->size - 1; j >= 0; --j) {
     printf("Removing %s from list\n", l_get(list, j));
