@@ -11,6 +11,7 @@ void demoLinkedList();
 
 int main(void) { 
   demoLinkedList(); 
+  //demoQueue();
 }
 
 void demoQueue() {
@@ -52,11 +53,9 @@ void demoLinkedList() {
     printf("%s\n", l_get(list, j));
   }
 
-  // Test out of bounds
+  // Test out of bounds (will cause an exit)
   printf("Reading items out of bounds from list...\n");
-  printf("Test");
-  printf(l_get(list, 1));
-  printf(l_get(list, 20));
+  //printf(l_get(list, -1));
 
   printf("Removing items from list...\n");
   for (int j = list->size - 1; j >= 0; --j) {
