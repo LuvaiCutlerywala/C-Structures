@@ -9,7 +9,9 @@
 void demoQueue();
 void demoLinkedList();
 
-int main(void) { demoLinkedList(); }
+int main(void) { 
+  demoLinkedList(); 
+}
 
 void demoQueue() {
   char *strings[] = {"Apple",     "Banana", "Orange",    "Grapes",
@@ -52,7 +54,7 @@ void demoLinkedList() {
 
   // Test out of bounds
   printf("Reading items out of bounds from list...\n");
-  printf(l_get(list, -1));
+  printf(l_get(list, 1));
   printf(l_get(list, 20));
 
   printf("Removing items from list...\n");

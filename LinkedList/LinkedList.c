@@ -13,6 +13,8 @@ LinkedList *l_generate(const int maxSize) {
 
 char *l_get(LinkedList *list, const int index) {
   // Early return for outside bounds
+  printf("Getting list item");
+  printf(list->size);
   if (index < 0 || index >= list->size) {
     printf("Index outside bounds of LinkedList");
     return NULL;
