@@ -79,7 +79,7 @@ Temporary Items
 *.x86_64
 *.hex
 *.app
-*.pkg
+main
 
 # Debug files
 *.dSYM/
