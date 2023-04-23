@@ -1,12 +1,29 @@
 #include "./LinkedList.h"
 
+// Constructor function to allocate memory and set linked list pointers
+LinkedList *l_generate(const int maxSize) {
+  LinkedList *list = malloc(sizeof(LinkedList));
+  list->maxSize = maxSize;
+  list->size = 0;
+  list->start = NULL;
+  list->end = NULL;
+
+  return list;
+}
+
 char *l_get(LinkedList *list, const int index) {
+  // Early return for outside bounds
   if (index < 0 || index >= list->size) {
-    return NULL;
-  } else if (index + 1 == list->size) {
+    printf("\n Index outside bounds of LinkedList, exiting.");
+    exit(1);
+  }
+
+  // Faster early return if getting last value
+  if (index + 1 == list->size) {
     return list->end->value;
   }
 
+  // Traverse linked list
   L_Node *curr = list->start;
   for (int i = 0; i < index; ++i) {
     curr = curr->next;
@@ -65,14 +82,6 @@ void l_remove(LinkedList *list, const int index) {
   free(curr);
 }
 
-LinkedList *l_generate(const int maxSize) {
-  LinkedList *list = malloc(sizeof(LinkedList));
-  list->maxSize = maxSize;
-  list->size = 0;
-  list->start = NULL;
-  list->end = NULL;
-
-  return list;
+int l_capacity(LinkedList *list) { 
+  return (list->maxSize - list->size); 
 }
-
-int l_capacity(LinkedList *list) { return (list->maxSize - list->size); }
